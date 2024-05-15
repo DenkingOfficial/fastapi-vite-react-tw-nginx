@@ -1,0 +1,6 @@
+[submodule "fastapi-backend-template"]
+	path = fastapi-backend-template
+	url = https://github.com/DenkingOfficial/fastapi-backend-template.git
+[submodule "vite-react-tw-template"]
+	path = vite-react-tw-template
+	url = https://github.com/DenkingOfficial/vite-react-tw-template.git

@@ -1,18 +1,18 @@
 version: "3.8"
 
 services:
-  backend:
-    container_name: "backend"
+  fastapi-backend:
+    container_name: "fastapi-backend"
     build:
-      context: ./backend
+      context: ./fastapi-backend-template
       dockerfile: Dockerfile
     ports:
       - 8000:8000
 
-  frontend:
-    container_name: "frontend"
+  vite-react-tw-frontend:
+    container_name: "vite-react-tw-frontend"
     build:
-      context: ./frontend
+      context: ./vite-react-tw-template
       dockerfile: Dockerfile
     ports:
       - 80:80
