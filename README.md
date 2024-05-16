@@ -10,7 +10,7 @@ This template provides a minimal setup to get FastAPI backend working with React
 
 `git clone --recurse-submodules https://github.com/DenkingOfficial/fastapi-vite-react-tw-nginx`
 
-2) Remove .git from every folder to use this as a boilerplate (from cloned repo, from fastapi-backend-template and vite-react-tw-template)
+2) Remove .gitmodules file and .git from every folder to use this as a boilerplate (from cloned repo, from fastapi-backend-template and vite-react-tw-template)
 
 3) Edit docker-compose.yml however you like (change service names, container names, contexts and ports)
 
