@@ -6,11 +6,21 @@ services:
     build:
       context: ./fastapi-backend-template
       dockerfile: Dockerfile
+    networks:
+      - my-network
 
   vite-react-tw-frontend:
     container_name: "vite-react-tw-frontend"
     build:
       context: ./vite-react-tw-template
       dockerfile: Dockerfile
-    ports:
-      - 80:80
+    networks:
+      - my-network
+    environment:
+      - VIRTUAL_HOST=localhost
+    expose:
+      - 80
+
+networks:
+  my-network:
+    external: true
