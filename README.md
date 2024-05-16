@@ -8,7 +8,7 @@ This template provides a minimal setup to get FastAPI backend working with React
 
 1) Clone repo with all submodules
 
-`git clone --recurse-submodules https://github.com/DenkingOfficial/fastapi-vite-react-tw-nginx`
+    `git clone --recurse-submodules https://github.com/DenkingOfficial/fastapi-vite-react-tw-nginx`
 
 2) Remove .gitmodules file and .git from every folder to use this as a boilerplate (from cloned repo, from fastapi-backend-template and vite-react-tw-template)
 
@@ -16,7 +16,7 @@ This template provides a minimal setup to get FastAPI backend working with React
 
 4) If you don't need another nginx server for reverse proxying multiple apps run:
 
-`docker compose up --build`
+    `docker compose up --build`
 
 ### Multiple apps
 
@@ -28,17 +28,17 @@ If you need another nginx server for reverse proxying multiple apps then there a
 
 For using any of these you need to create a docker network with any name you prefer:
 
-`docker network create my-network`
+    `docker network create my-network`
 
 ### First option
 
 1) Run nginx-proxy container using this command:
 
-`docker run --detach --name nginx-proxy --publish 80:80 --volume /var/run/docker.sock:/tmp/docker.sock:ro nginxproxy/nginx-proxy:1.5`
+    `docker run --detach --name nginx-proxy --publish 80:80 --volume /var/run/docker.sock:/tmp/docker.sock:ro nginxproxy/nginx-proxy:1.5`
 
 2) Connect this container to the network you made:
 
-`docker network connect my-network nginx-proxy`
+    `docker network connect my-network nginx-proxy`
 
 3) Edit docker-compose-proxy.yml file:
 
@@ -55,7 +55,7 @@ For using any of these you need to create a docker network with any name you pre
 
 5) For each app run:
 
-`docker compose -f docker-compose-proxy.yml up --build`
+    `docker compose -f docker-compose-proxy.yml up --build`
 
 ### Second option
 
@@ -171,10 +171,10 @@ For using any of these you need to create a docker network with any name you pre
         external: true
     ```
 
-4) Run `docker compose up --build` in nginx-reverse-proxy repo
-
-5) Return to template repo and run:
+4) Run this command in each app made with this template:
 
     `docker compose -f docker-compose-my-proxy.yml up --build`
+
+5) Run `docker compose up --build` in nginx-reverse-proxy repo
 
 At this point your app/apps should be working
