@@ -76,7 +76,7 @@ For using any of these you need to create a docker network with any name you pre
     **NETWORK SHOULD BE THE SAME**
 
 
-4) There's a `nginx.conf` file, which you need to edit
+4) Open cloned nginx-reverse-proxy repo. There's a `nginx.conf` file, which you need to edit
 
     ```
     events {
