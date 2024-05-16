@@ -55,7 +55,7 @@ For using any of these you need to create a docker network with any name you pre
 
 5) For each app run:
 
-`docker compose up --build -f docker-compose-proxy.yml`
+`docker compose -f docker-compose-proxy.yml up --build`
 
 ### Second option
 
@@ -175,6 +175,6 @@ For using any of these you need to create a docker network with any name you pre
 
 5) Return to template repo and run:
 
-    `docker compose up --build -f docker-compose-my-proxy.yaml`
+    `docker compose -f docker-compose-my-proxy.yml up --build`
 
 At this point your app/apps should be working
